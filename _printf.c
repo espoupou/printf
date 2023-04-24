@@ -23,15 +23,17 @@ int _printf(const char *format, ...)
 		}
 
 		p++;
-		if (*p == '%' || *p == 'c')
+		if (*p == '%')
 		{
-			count++;
-			printf("%d ", count);
+			count += _putchar('%');
+		}
+		else if (*p == 'c')
+		{
+			count += _putchar(va_arg(params, char));
 		}
 		else if (*p == 's')
 		{
-			count += _strlen(va_arg(params, char *));
-			printf("%d ", count);
+			count += _puts(va_arg(params, char *));
 		}
 	}
 	va_end(params);
