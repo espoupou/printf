@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 	{
 		if (*p != '%')
 		{
-			count++;
+			count += _putchar(*p);
 			continue;
 		}
 
@@ -29,11 +29,16 @@ int _printf(const char *format, ...)
 		}
 		else if (*p == 'c')
 		{
-			count += _putchar(va_arg(params, char));
+			count += _putchar(va_arg(params, int));
 		}
 		else if (*p == 's')
 		{
 			count += _puts(va_arg(params, char *));
+		}
+		else
+		{
+			count += _putchar('%');
+			count += _putchar(*p);
 		}
 	}
 	va_end(params);
