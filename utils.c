@@ -24,6 +24,9 @@ int _putchar(char c)
 int _puts(char *s)
 {
 	int i;
+	
+	if (!s)
+		s = "(null)";
 
 	for (i = 0; s[i]; i++)
 	{
