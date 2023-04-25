@@ -11,7 +11,7 @@ int _putchar(char c)
 {
 	char buffer[1];
 	buffer[0] = c;
-	write(1, buffer, 1);
+	write(1, &buffer, 1);
 	return (1);
 }
 
