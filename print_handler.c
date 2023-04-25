@@ -14,10 +14,11 @@ int (*print_handler(char c))(va_list params)
 		{'s', print_string},
 		{'d', print_int},
 		{'i', print_int},
+		{'b', print_bin},
 		};
 	int i;
 
-	for (i = 0; i < 4; i++)
+	for (i = 0; i < 5; i++)
 		if (ph[i].c == c)
 			return (ph[i].f);
 

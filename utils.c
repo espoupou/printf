@@ -37,3 +37,34 @@ int _puts(char *s)
 	return (i);
 }
 
+/**
+ * convert - converter from decimal and base
+ * @num: number
+ * @base: base
+ * @lowercase: if hexa values need to be lowercase
+ * Return: string pointer of convertion
+ */
+
+char *convert(unsigned long int num, int base, int lowercase)
+{
+	/*static char *rep;*/
+	int a;
+	static char buffer[50];
+	char *ptr;
+
+	/*rep = (lowercase)
+		? "0123456789abcdef"
+		: "0123456789ABCDEF";*/
+	ptr = &buffer[49];
+	*ptr = '\0';
+	do {
+		*--ptr = ((a = (num % base))  < 10)
+				? (a + '0')
+				: ((lowercase)
+					? (a + 'a')
+					: (a + 'A'));
+		num /= base;
+	} while (num != 0);
+
+	return (ptr);
+}

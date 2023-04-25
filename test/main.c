@@ -23,5 +23,9 @@ int main(int argc, char **argv)
 	printf(" : %d\n", _printf("He%clo %d", 'l', 0));
 	printf(" : %d\n", _printf("hell%c %s %d%d", '0', "World", 2, 0));
 
+	printf(" : %d\n", _printf("Hello"));
+        printf(" : %d\n", _printf("Hello %b", 0));
+	printf(" : %d\n", _printf("Hello %b", 98));
+        printf(" : %d\n", _printf("H%cllo %d %b", 'e', 100, 100));
 	return (0);
 }
