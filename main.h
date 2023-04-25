@@ -3,7 +3,17 @@
 
 #include <stdarg.h>
 
-/* directive && function associated structure */
+/*
+ * directive && function associated structure
+ */
+
+/**
+ * struct _printfHandler - Struct op
+ *
+ * @c: directive.
+ * @f: function associated
+ */
+
 typedef struct _printfHandler
 {
 	char c;

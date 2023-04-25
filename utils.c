@@ -10,6 +10,7 @@
 int _putchar(char c)
 {
 	char buffer[1];
+
 	buffer[0] = c;
 	write(1, &buffer, 1);
 	return (1);
@@ -24,7 +25,7 @@ int _putchar(char c)
 int _puts(char *s)
 {
 	int i;
-	
+
 	if (!s)
 		s = "(null)";
 
