@@ -72,8 +72,8 @@ char *_convert(unsigned long int num, int base, int lowercase)
 		*--p = ((a = (num % base))  < 10)
 				? (a + '0')
 				: ((lowercase)
-					? (a + 'a')
-					: (a + 'A'));
+					? (a - 10 + 'a')
+					: (a - 10 + 'A'));
 		num /= base;
 	} while (num != 0);
 
