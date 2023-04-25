@@ -19,6 +19,7 @@ int (*print_handler(char c))(va_list params)
 		{'o', print_oct},
 		{'x', print_hex},
 		{'X', print_HEX},
+		{'S', print_cust_string},
 		};
 	int i;
 
