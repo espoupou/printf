@@ -14,7 +14,7 @@
  * @f: function associated
  */
 
-typedef struct _printfHandler
+typedef struct printfHandler
 {
 	char c;
 	int (*f)(va_list params);
@@ -26,5 +26,12 @@ int _strlen(char *s);
 /* Utilities functions */
 int _putchar(char c);
 int _puts(char *s);
+
+/* print_handler */
+int (*print_handler(char s))(va_list params);
+
+/* print_alpha */
+int print_char (va_list params);
+int print_string(va_list params);
 
 #endif

@@ -19,14 +19,14 @@ int _putchar(char c)
 /**
  * _puts - write string
  * @s: the string
- * Return: write a string to stdout
+ * Return: number of char
  */
 
 int _puts(char *s)
 {
 	int i;
 
-	if (!s)
+	if (s == NULL)
 		s = "(null)";
 
 	for (i = 0; s[i]; i++)
