@@ -39,6 +39,7 @@ int print_cust_string(va_list params);
 /* print num */
 int print_int(va_list params);
 int print_unsigned(va_list params);
+int print_address(va_list params);
 /* print base */
 int print_bin(va_list params);
 int print_oct(va_list params);
