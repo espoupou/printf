@@ -36,10 +36,8 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			/*
-			 * count += _putchar('%');
-			 * count += _putchar(*p);
-			 */
+			count += _putchar('%');
+			count += _putchar(*p);
 			va_arg(params, char *);
 		}
 	}
