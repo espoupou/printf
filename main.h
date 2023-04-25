@@ -1,6 +1,8 @@
 #ifndef __MAIN_H__
 #define __MAIN_H__
 
+#include <stdarg.h>
+
 /* directive && function associated structure */
 typedef struct _printfHandler
 {
