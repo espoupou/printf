@@ -39,7 +39,7 @@ int print_cust_string(va_list params)
 
 	for (i = 0; s[i]; i++)
 	{
-		if (s[i] > 0 && (s[i] < 32 && s[i] >= 127)
+		if (s[i] > 0 && (s[i] < 32 && s[i] >= 127))
 		{
 			count += _puts("\\x");
 			str = _convert(s[i], 16, 0);
