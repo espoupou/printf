@@ -20,10 +20,11 @@ int (*print_handler(char c))(va_list params)
 		{'x', print_hex},
 		{'X', print_HEX},
 		{'S', print_cust_string},
+		{'p', print_address},
 		};
 	int i;
 
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < 11; i++)
 		if (ph[i].c == c)
 			return (ph[i].f);
 

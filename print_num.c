@@ -31,3 +31,22 @@ int print_unsigned(va_list params)
 	/* return (_print_int_helper(va_arg(params, unsigned int))); */
 	return (_puts(_convert(va_arg(params, unsigned int), 10, 0)));
 }
+
+/**
+ * print_address - print address
+ * @params: paramaters to directive
+ * Return: number of char
+ */
+
+int print_address(va_list params)
+{
+	unsigned long int p = va_arg(params, unsigned long int);
+
+	int count = 0;
+
+	if (!p)
+		return (_puts("(null)"));
+	count += _puts("0x");
+	count += _puts(_convert(p, 16, 1));
+	return (count);
+}
