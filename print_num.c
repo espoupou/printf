@@ -45,7 +45,7 @@ int print_address(va_list params)
 	int count = 0;
 
 	if (!p)
-		return (_puts("(null)"));
+		return (_puts("(nil)"));
 	count += _puts("0x");
 	count += _puts(_convert(p, 16, 1));
 	return (count);
