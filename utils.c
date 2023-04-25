@@ -38,23 +38,38 @@ int _puts(char *s)
 }
 
 /**
- * convert - converter from decimal and base
+ * _print_int_helper - helper for print_int
+ * @n: numer to print
+ * Return: number of char
+ */
+
+int _print_int_helper(int n)
+{
+	int count = 0;
+
+	if (n / 10)
+		count += _print_int_helper(n / 10);
+
+	return (count + _putchar((n % 10) + '0'));
+}
+
+/**
+ * _convert - converter from decimal and base
  * @num: number
  * @base: base
  * @lowercase: if hexa values need to be lowercase
  * Return: string pointer of convertion
  */
 
-char *convert(unsigned long int num, int base, int lowercase)
+char *_convert(unsigned long int num, int base, int lowercase)
 {
 	int a;
 	static char buffer[50];
-	char *ptr;
+	char *p = &buffer[49];
 
-	ptr = &buffer[49];
-	*ptr = '\0';
+	*p = '\0';
 	do {
-		*--ptr = ((a = (num % base))  < 10)
+		*--p = ((a = (num % base))  < 10)
 				? (a + '0')
 				: ((lowercase)
 					? (a + 'a')
@@ -62,5 +77,5 @@ char *convert(unsigned long int num, int base, int lowercase)
 		num /= base;
 	} while (num != 0);
 
-	return (ptr);
+	return (p);
 }

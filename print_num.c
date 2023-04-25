@@ -21,17 +21,13 @@ int print_int(va_list params)
 }
 
 /**
- * _print_int_helper - helper for print_int
- * @n: numer to print
+ * print_unsigned - print an unsigned integer
+ * @params: paramaters to directive
  * Return: number of char
  */
 
-int _print_int_helper(int n)
+int print_unsigned(va_list params)
 {
-	int count = 0;
-
-	if (n / 10)
-		count += _print_int_helper(n / 10);
-
-	return (count + _putchar((n % 10) + '0'));
+	/* return (_print_int_helper(va_arg(params, unsigned int))); */
+	return (_puts(_convert(va_arg(params, unsigned int), 10, 0)));
 }

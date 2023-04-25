@@ -26,7 +26,8 @@ int _strlen(char *s);
 /* Utilities functions */
 int _putchar(char c);
 int _puts(char *s);
-char *convert(unsigned long int num, int base, int lowercase);
+int _print_int_helper(int n);
+char *_convert(unsigned long int num, int base, int lowercase);
 
 /* print handler */
 int (*print_handler(char s))(va_list params);
@@ -36,8 +37,11 @@ int print_char (va_list params);
 int print_string(va_list params);
 /* print num */
 int print_int(va_list params);
-int _print_int_helper(int n);
+int print_unsigned(va_list params);
 /* print base */
 int print_bin(va_list params);
+int print_oct(va_list params);
+int print_hex(va_list params);
+int print_HEX(va_list params);
 
 #endif
