@@ -23,7 +23,7 @@ int (*print_handler(char c))(va_list params)
 		};
 	int i;
 
-	for (i = 0; i < 9; i++)
+	for (i = 0; i < 10; i++)
 		if (ph[i].c == c)
 			return (ph[i].f);
 

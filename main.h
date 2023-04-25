@@ -35,6 +35,7 @@ int (*print_handler(char s))(va_list params);
 /* print alpha */
 int print_char (va_list params);
 int print_string(va_list params);
+int print_cust_string(va_list params);
 /* print num */
 int print_int(va_list params);
 int print_unsigned(va_list params);

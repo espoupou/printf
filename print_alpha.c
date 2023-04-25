@@ -30,7 +30,7 @@ int print_string(va_list params)
 
 int print_cust_string(va_list params)
 {
-	char *s = va_arg(params, char *), str;
+	char *s = va_arg(params, char *), *str;
 	int i = 0, count = 0;
 
 
@@ -46,7 +46,7 @@ int print_cust_string(va_list params)
 		else
 		{
 			count += _puts("\\x");
-			str = convert(s[i], 16, 0);
+			str = _convert(s[i], 16, 0);
 			if (!str[1])
 				count += _putchar('0');
 			count += _puts(str);
