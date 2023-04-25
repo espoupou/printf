@@ -36,3 +36,4 @@ int _puts(char *s)
 
 	return (i);
 }
+

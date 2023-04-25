@@ -11,6 +11,7 @@ int _printf(const char *format, ...)
 	va_list params;
 	const char *p;
 	int count = 0;
+	int (*print)(va_list);
 
 	va_start(params, format);
 	for (p = format; *p; p++)
@@ -25,21 +26,12 @@ int _printf(const char *format, ...)
 		if (*p == '%')
 		{
 			count += _putchar('%');
+			continue;
 		}
-		else if (*p == 'c')
-		{
-			count += _putchar(va_arg(params, int));
-		}
-		else if (*p == 's')
-		{
-			count += _puts(va_arg(params, char *));
-		}
-		else
-		{
-			count += _putchar('%');
-			count += _putchar(*p);
-			va_arg(params, char *);
-		}
+		print = print_handler(*p);
+		count += (print)
+			? print(params)
+			: _printf("%%%c", *p); /* print the directive as it is */
 	}
 	va_end(params);
 

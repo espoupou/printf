@@ -8,13 +8,13 @@
  */
 
 /**
- * struct _printfHandler - Struct op
+ * struct printHandler - Struct op
  *
  * @c: directive.
  * @f: function associated
  */
 
-typedef struct printfHandler
+typedef struct printHandler
 {
 	char c;
 	int (*f)(va_list params);
@@ -27,11 +27,14 @@ int _strlen(char *s);
 int _putchar(char c);
 int _puts(char *s);
 
-/* print_handler */
+/* print handler */
 int (*print_handler(char s))(va_list params);
 
-/* print_alpha */
+/* print alpha */
 int print_char (va_list params);
 int print_string(va_list params);
+/* print num */
+int print_int(va_list params);
+int _print_int_helper(int n);
 
 #endif
