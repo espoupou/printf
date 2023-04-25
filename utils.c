@@ -9,10 +9,20 @@
 
 int _putchar(char c)
 {
-	char buffer[1];
+	static char buffer[1024];
+	static int i;
 
-	buffer[0] = c;
-	write(1, &buffer, 1);
+	if (c == -1 || i >= 1024)
+	{
+		write(1, buffer, i);
+		i = 0;
+	}
+	if (c != -1)
+	{
+		buffer[i] = c;
+		i++;
+	}
+
 	return (1);
 }
 

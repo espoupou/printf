@@ -34,6 +34,6 @@ int _printf(const char *format, ...)
 			: _printf("%%%c", *p); /* print the directive as it is */
 	}
 	va_end(params);
-
+	_putchar(-1);
 	return (count);
 }
