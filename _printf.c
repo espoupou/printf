@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 
 	int (*print)(va_list, fH *);
 
-	fH f = {0, 0, 0, 0};
+	fH f = {0, 0, 0, 0, 0};
 
 	va_start(params, format);
 
