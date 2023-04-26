@@ -9,7 +9,7 @@
 
 int print_int(va_list params, fH *f)
 {
-	int n = va_arg(params, int);
+	long int n = va_arg(params, long int);
 	int count = count_digit(n);
 
 	if (f->space == 1 && f->plus == 0 && n >= 0)
