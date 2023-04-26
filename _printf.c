@@ -10,8 +10,11 @@ int _printf(const char *format, ...)
 {
 	va_list params;
 	const char *p;
+
 	register int count = 0;
+
 	int (*print)(va_list, fH *);
+
 	fH f = {0, 0, 0};
 
 	va_start(params, format);

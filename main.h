@@ -18,7 +18,7 @@
 
 typedef struct flagHandler
 {
-	int plus, space, hash;
+	int plus, space, hash, zero, minus;
 } fH;
 
 /**
