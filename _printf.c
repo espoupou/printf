@@ -10,11 +10,17 @@ int _printf(const char *format, ...)
 {
 	va_list params;
 	const char *p;
-	int count = 0;
+	register int count = 0;
 	int (*print)(va_list, fH *);
 	fH f = {0, 0, 0};
 
 	va_start(params, format);
+
+	if (!format || (format[0] == '%' && !format[1]))
+		return (-1);
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
+		return (-1);
+
 	for (p = format; *p; p++)
 	{
 		if (*p != '%')
