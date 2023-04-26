@@ -53,7 +53,7 @@ int _puts(char *s)
  * Return: number of char
  */
 
-int _print_int_helper(int n)
+int _print_int_helper(long int n)
 {
 	if (n < 0)
 	{
