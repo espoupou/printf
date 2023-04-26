@@ -40,6 +40,8 @@ int _printf(const char *format, ...)
 		}
 		while (flag_handler(*p, &f))
 			p++;
+		if (*p == 'l' || *p == 'h')
+			p++;
 		print = print_handler(*p);
 		count += (print)
 			? print(params, &f)
