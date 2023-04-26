@@ -63,7 +63,7 @@ int _print_int_helper(int n)
 
 	if (n / 10)
 		_print_int_helper(n / 10);
-	_putchar((n % 10) + '0');
+	return (_putchar((n % 10) + '0'));
 }
 
 /**
