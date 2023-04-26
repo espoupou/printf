@@ -40,6 +40,7 @@ int _putchar(char c);
 int _puts(char *s);
 int _print_int_helper(int n);
 char *_convert(unsigned long int num, int base, int lowercase);
+int count_digit(int i);
 
 /* print handler */
 int (*print_handler(char s))(va_list, fH *);

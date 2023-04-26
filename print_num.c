@@ -10,7 +10,7 @@
 int print_int(va_list params, fH *f)
 {
 	int n = va_arg(params, int);
-	int count = 0;
+	int count = count_digit(n);
 
 	if (f->space == 1 && f->plus == 0 && n >= 0)
 		count += _putchar(' ');
@@ -19,7 +19,8 @@ int print_int(va_list params, fH *f)
 	if (n <= 0)
 		count++;
 
-	return (count + _print_int_helper(n));
+	_print_int_helper(n);
+	return (count);
 }
 
 /**
