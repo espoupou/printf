@@ -57,9 +57,14 @@ int _print_int_helper(int n)
 {
 	int count = 0;
 
+	if (n < 0)
+	{
+		count += _putchar('-');
+		n = -n;
+	}
+
 	if (n / 10)
 		count += _print_int_helper(n / 10);
-
 	return (count + _putchar((n % 10) + '0'));
 }
 

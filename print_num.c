@@ -16,11 +16,8 @@ int print_int(va_list params, fH *f)
 		count += _putchar(' ');
 	if (f->plus == 1 && n >= 0)
 		count += _putchar('+');
-	if (n < 0)
-	{
-		count += _putchar('-');
-		n *= -1;
-	}
+	if (n <= 0)
+		count++;
 
 	return (count + _print_int_helper(n));
 }
