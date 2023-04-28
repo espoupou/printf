@@ -53,17 +53,11 @@ int _puts(char *s)
  * Return: number of char
  */
 
-int _print_int_helper(int n)
+void _print_int_helper(long int n)
 {
-	if (n < 0)
-	{
-		_putchar('-');
-		n = -n;
-	}
-
 	if (n / 10)
 		_print_int_helper(n / 10);
-	return (_putchar((n % 10) + '0'));
+	_putchar((n % 10) + '0');
 }
 
 /**
