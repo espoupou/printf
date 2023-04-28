@@ -14,6 +14,8 @@
  * @plus: plus flag
  * @space: space flag
  * @hash: hash flag
+ * @zero: zero flag
+ * @minus: minus flag
  */
 
 typedef struct flagHandler
@@ -38,7 +40,7 @@ int _printf(const char *format, ...);
 /* Utilities functions */
 int _putchar(char c);
 int _puts(char *s);
-int _print_int_helper(long int n);
+int _print_int_helper(int n);
 char *_convert(unsigned long int num, int base, int lowercase);
 int count_digit(int i);
 

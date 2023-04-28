@@ -19,7 +19,7 @@ int print_int(va_list params, fH *f)
 	if (n < 0)
 		count++;
 
-	_print_int_helper((long int) n);
+	_print_int_helper(n);
 	return (count);
 }
 
