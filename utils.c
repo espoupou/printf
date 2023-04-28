@@ -53,7 +53,7 @@ int _puts(char *s)
  * Return: number of char
  */
 
-void _print_int_helper(long int n)
+void _print_int_helper(unsigned long int n)
 {
 	if (n / 10)
 		_print_int_helper(n / 10);

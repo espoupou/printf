@@ -19,7 +19,7 @@ int print_int(va_list params, fH *f)
 	if (n < 0)
 		count += _putchar('-');
 
-	_print_int_helper((unsigned int)n);
+	_print_int_helper((unsigned long int)n);
 	return (count);
 }
 
