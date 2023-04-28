@@ -40,7 +40,7 @@ int _printf(const char *format, ...);
 /* Utilities functions */
 int _putchar(char c);
 int _puts(char *s);
-void _print_int_helper(long int n);
+void _print_int_helper(unsigned long int n);
 char *_convert(unsigned long int num, int base, int lowercase);
 int count_digit(int i);
 
