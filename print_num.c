@@ -9,14 +9,14 @@
 
 int print_int(va_list params, fH *f)
 {
-	long int n = va_arg(params, long int);
+	int n = va_arg(params, int);
 	int count = count_digit(n);
 
 	if (f->space == 1 && f->plus == 0 && n >= 0)
 		count += _putchar(' ');
 	if (f->plus == 1 && n >= 0)
 		count += _putchar('+');
-	if (n <= 0)
+	if (n < 0)
 		count++;
 
 	_print_int_helper((long int) n);
