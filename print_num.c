@@ -17,9 +17,12 @@ int print_int(va_list params, fH *f)
 	if (f->plus == 1 && n >= 0)
 		count += _putchar('+');
 	if (n < 0)
+	{
 		count += _putchar('-');
+		n = -n;
+	}
 
-	_print_int_helper((unsigned long int)n);
+	_print_int_helper(n);
 	return (count);
 }
 
